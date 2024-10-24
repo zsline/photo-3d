@@ -18,7 +18,8 @@ p {
 	--transition: 1.75s cubic-bezier(.2, .6, 0, 1);
 }
 .title.dark{
-	border: 3px solid #9b7750 !important;
+	border: 3px solid #9b7750;
+	
 }
 .title.dark h3, .title.dark p, .title.dark .subtitle{
 	color: #9b7750 !important;
@@ -100,12 +101,13 @@ p {
 .title {
 	position: absolute;
 	right: 140px;
-	top: 80px;
+	top: 40px;
 	padding: 40px;
 	background-color: rgba(225, 225, 225, 0.1);
 	backdrop-filter: blur(2px);
 	border-radius: 14px;
 	border: 3px solid aliceblue;
+	mix-blend-mode: exclusion;
 }
 .title h3{
 	font-family: sans-serif;
@@ -128,4 +130,15 @@ p {
 .vedmak__title {
 	right: 292px;
     top: 67px;
+}
+@media (max-width: 440px) {
+	.title {
+		width: 90%;
+		right: 50%;
+		transform: translateX(50%);
+		top: 20px;
+	}
+	.title h3{
+		font-size: 46px;
+	}
 }
